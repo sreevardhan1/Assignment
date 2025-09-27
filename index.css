@@ -90,9 +90,3 @@ h4 {
     margin: 5px 0;
     opacity: 0.9;
 }
-
-.fa-star {
-    color:blueviolet;
-    margin: 0 2px;
-    animation: pulse 2s infinite;
-}
