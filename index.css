@@ -1,92 +1,100 @@
-*{
-    padding: 0;
-    margin: 0;
-     box-sizing: border-box;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.main{
-    height: 550px;
-    background:rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-    border: 5px solid black;
-    border-radius: 15px;
-    margin: 80px;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 40px;
-    animation: fadeIn 1s ease-in-out;
+/* Container for all cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.card1, .card2, .card3{
-    width: 300px;
-    height: 450px;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 15px;
-    background-color: mediumslateblue;
-    margin: 20px;
-    float: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:space-around;
-    text-align: center;
-    padding: 20px;
-    margin: 25px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-}
-.card1:hover, .card2:hover, .card3:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+/* Card Design */
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn1, .btn2 {
-    width: 100px;
-    height: 35px;
-    border-radius: 20px;
-    margin: 5px;
-    border: none;
-    cursor: pointer;
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    color: #fff;
-    font-weight: 500;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
-.img1, .img2, .img3{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 10px;
-    background-origin: padding-box;
-    border: 5px solid blueviolet;
-    box-shadow: 0px 5px 15px #151515;
-    transition: transform 0.3s ease;
-
+/* Card Header */
+.card-header {
+  background: #7d2ae8;
+  padding: 30px;
 }
 
-h2 {
-    font-size: 24px;
-    margin: 10px 0;
+.card-header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-h4 {
-    font-size: 16px;
-    margin: 5px 0;
-    opacity: 0.9;
+/* Card Body */
+.card-body {
+  padding: 20px;
+}
+
+.card-body h2 {
+  font-size: 22px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.card-body h4 {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* Stars */
+.stars i {
+  color:blueviolet;
+  margin: 0 2px;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  margin: 5px;
+  background: #7d2ae8;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #5a18b2;
+  transform: scale(1.05);
 }
